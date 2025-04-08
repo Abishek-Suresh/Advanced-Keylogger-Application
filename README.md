@@ -87,6 +87,10 @@ Anyways, these are the output files that are being sen over mail:
 As you can see, this one's dependent on other dll and dependencies
 ![Image](https://github.com/user-attachments/assets/16d29711-087f-469f-8fad-e3eea199a3e1)
 
+<br>
+
 **OUTPUT EXE USING NUITKA:** <br>
 This executable runs without any dependencies as a onefile.
 ![Image](https://github.com/user-attachments/assets/21bdfba8-d991-4f34-9c49-62edf2ea9239)
+
+
