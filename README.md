@@ -74,23 +74,44 @@ Anyways, these are the output files that are being sen over mail:
 
 ### Obstacles I stumbled upon:
 
-- First obstacle that I faced is when I tried to send the mail using smtplib, Logging in with your gmail account [Used a burner account] and password no longer works as google have removed less secure ways of signing in, so **how to solve this** : Create an app password after turning on Two-factor Authorization, and use that password instead of the account's password. <br>
-- The timer and counter functionality took me more time to implement properly. <br>
-- Compiling the python file into an executable, is where I literally spend more time in this project, especially in order to evade the antivirus. Initially I used **pyinstaller** and compiled it regularly, it got detected. I tried using **--windowed**, **--noconsole flags** in order to get an executable which dont open a terminal explicitly when executed. It Also got detected. Then I did some workaround and referred to David Bombal's youtube video, finally I got an executable which evaded the antivirus but it opened a terminal everytime I opened the executable, which is no good as you can't use it as a proper payload.  [NOTE: I packed the executable as onefile] <br>
-- In order to prevent this terminal getting opened, I tried to implement some sort of GUIs, so that the GUI get's opened with some deceiving notifications eg: Your device will restart to update outside of active hours (estimate: 5 min). <br>
-- Experimented with these modules one by one: tkinter [not worked, it showed the notification message along with the blank black terminal] , pythonnet [a module which utilizes .net dll's such as windows forms - didn't worked either]. <br>
-- Finally my brain cell told me to try alternate compilers: Compiled using **cx_freeze**, guess what this one evaded the antivirus but I was not able to bundle the executable into onefile, for this too you literally have to package all required libraries including python so your executable runs independently of system Python, another FAILURE...<br>
+- First obstacle that I faced is when I tried to send the mail using smtplib, Logging in with your gmail account [Used a burner account] and password no longer works as google have removed less secure ways of signing in, so **how to solve this** : Create an app password after turning on Two-factor Authorization, and use that password instead of the account's password.
+  
+- The timer and counter functionality took me more time to implement properly.
+  
+- Compiling the python file into an executable, is where I literally spend more time in this project, especially in order to evade the antivirus. Initially I used **pyinstaller** and compiled it regularly, it got detected. I tried using **--windowed**, **--noconsole flags** in order to get an executable which dont open a terminal explicitly when executed. It Also got detected. Then I did some workaround and referred to David Bombal's youtube video, finally I got an executable which evaded the antivirus but it opened a terminal everytime I opened the executable, which is no good as you can't use it as a proper payload.  [NOTE: I packed the executable as onefile].
+  
+- In order to prevent this terminal getting opened, I tried to implement some sort of GUIs, so that the GUI get's opened with some deceiving notifications eg: Your device will restart to update outside of active hours (estimate: 5 min).
+  
+- Experimented with these modules one by one: tkinter [not worked, it showed the notification message along with the blank black terminal] , pythonnet [a module which utilizes .net dll's such as windows forms - didn't worked either].
+  
+- Finally my brain cell told me to try alternate compilers: Compiled using **cx_freeze**, guess what this one evaded the antivirus but I was not able to bundle the executable into onefile, for this too you literally have to package all required libraries including python so your executable runs independently of system Python, another FAILURE...
+  
 - Atlast went with **nuitka** and did some workaround, it was a success. The executable did run as a background process and didn't opened any terminal.
 <br>
 
-**OUTPUT EXE USING CX_FREEZE:** <br>
+**OUTPUT EXE USING CX_FREEZE:** 
+
 As you can see, this one's dependent on other dll and dependencies
+
 ![Image](https://github.com/user-attachments/assets/16d29711-087f-469f-8fad-e3eea199a3e1)
 
 <br>
 
-**OUTPUT EXE USING NUITKA:** <br>
+**OUTPUT EXE USING NUITKA:**
+
 This executable runs without any dependencies as a onefile.
+
 ![Image](https://github.com/user-attachments/assets/21bdfba8-d991-4f34-9c49-62edf2ea9239)
 
 
+### REFERENCES:
+
+#### Thanks to David Bombal, Grant Collis, TechwithTim
+
+##### Videos I refered:
+
+https://youtu.be/25um032xgrw?si=iZw8bPnPW-RrVj9C <br>
+https://youtu.be/LBM3EzBXhdY?si=5fAR1UJe-FDcsXrx <br>
+https://youtu.be/qaZ-IbssPDI?si=Tw1JdovpCyzwpHnE <br>
+https://youtu.be/TbMKwl11itQ?si=rG4P9TRmU2XqTbUJ <br>
+ 
