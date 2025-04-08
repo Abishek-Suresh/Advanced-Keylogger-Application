@@ -17,13 +17,13 @@ This keylogger application is build with python and Compiled with Nuitka. The fu
   
 ## Code 
 ### Importing the Required Libraries: 
-- smtplib | MIMEMultipart |MIMEText| MIMEBase | encoders : For sending email
-- socket | Platform | OS | tempfile | time | getpass : For collecting information about the host and file operations
-- win32clipboard from pywin32 : To get the clipboard data from the victim machine
-- pynput : To listen and grab the keystrokes
-- write from scipy.io.wavfile | sounddevice : To record and save from microphone
-- Imagegrab from pillow : To take screenshots of the victim machine
-- subprocess | re : for grabbing wifi informations
+- **smtplib | MIMEMultipart |MIMEText| MIMEBase | encoders** : For sending email
+- **socket | Platform | OS | tempfile | time | getpass** : For collecting information about the host and file operations
+- **win32clipboard from pywin32** : To get the clipboard data from the victim machine
+- **pynput** : To listen and grab the keystrokes
+- **write from scipy.io.wavfile | sounddevice** : To record and save from microphone
+- **Imagegrab from pillow** : To take screenshots of the victim machine
+- **subprocess | re** : for grabbing wifi informations
 <br>
 
 ### Main Functions:
