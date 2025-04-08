@@ -2,7 +2,7 @@
 ![Image](https://github.com/user-attachments/assets/a26ddebf-dd2c-48c9-afe5-c1267095e7bb)
 <br>
 <br><br>
-This keylogger application is build with python and Compiled with Nuitka. The functionality of this keylogger doesn't stop at capturing keystrokes, it can take screenshots, record audio, collect important information such as system info and even get the stored wifi SSIDs and passwords from the system and send it to an email address, we just have to mention the number of iterations we want the keylogger program to run along with the time span for each iterations. For ethical reasons, I've not uploaded the executable file here in github, as it can evade antivirus such as malwarebytes or even windows defender. I've used Nuitka to compile the python script in such a way that it evades the antivirus and it does everything under the radar. This is a proof of concept and can be developed even further. 
+This keylogger application is build with python and Compiled with Nuitka. The functionality of this keylogger doesn't stop at capturing keystrokes, it can take screenshots, record audio, collect important information such as system info and even get the stored wifi SSIDs and passwords from the system and send it to an email address, we just have to mention the number of iterations we want the keylogger program to run along with the time span for each iterations. For ethical reasons, I've not uploaded the executable file here nor the whole code in github, as it can evade antivirus such as malwarebytes or even windows defender. I've used Nuitka to compile the python script in such a way that it evades the antivirus and it does everything under the radar. This is a proof of concept and can be developed even further. 
 <br>
 <br>
 
