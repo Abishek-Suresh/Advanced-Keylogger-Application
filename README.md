@@ -8,7 +8,7 @@ This keylogger application is build with python and Compiled with Nuitka. The fu
 
 ## Possible future developments
 - I've already tried to add screen recording feature using the python module ffmpeg. Yet to develop
-- Introducing Cryptography, we can encrypte the log files that we collect and then sent it via mail such that others can't access to the data without decrpyting it.
+- Introducing Cryptography, we can encrypted the log files that we collect and then sent it via mail such that others can't access to the data without decrpyting it.
 - Not just stopping with mail, we can further develop this application such that it can send all the collected information to a server.
 - steganograph this executable into a picture making it a great payload
 - and so on
@@ -58,5 +58,17 @@ This keylogger application is build with python and Compiled with Nuitka. The fu
 ### Flying under the radar - Leaving NO TRACE:
 - As I mentioned earlier, all the log files and recordings are getting stored in the temporary folder of the victim's machine. Once the iteration is completed and the mails have been sent, after 60 seconds, all those log files that got created will be deleted leveraging the OS module leaving no trace...
 
+### OUTPUT:
 
+#### This is how an email is sent out with all the information per iteration:
+
+I was keep on testing and this is how the inbox looked like :)
+![Image](https://github.com/user-attachments/assets/b5f20214-f0c3-427a-a9a4-f2a4fb475927)
+<br>
+
+Anyways, these are the output files that are being sen over mail:
+![Image](https://github.com/user-attachments/assets/d0d02c37-0263-4c94-9e09-e1953312b330)
+<br>
+
+### Obstacles I stumbled upon:
 
