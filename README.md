@@ -57,6 +57,7 @@ This keylogger application is build with python and Compiled with Nuitka. The fu
 
 ### Flying under the radar - Leaving NO TRACE:
 - As I mentioned earlier, all the log files and recordings are getting stored in the temporary folder of the victim's machine. Once the iteration is completed and the mails have been sent, after 60 seconds, all those log files that got created will be deleted leveraging the OS module leaving no trace...
+<br>
 
 ### OUTPUT:
 
@@ -69,6 +70,20 @@ I was keep on testing and this is how the inbox looked like :)
 Anyways, these are the output files that are being sen over mail:
 ![Image](https://github.com/user-attachments/assets/d0d02c37-0263-4c94-9e09-e1953312b330)
 <br>
+<br>
 
 ### Obstacles I stumbled upon:
+
+- First obstacle that I faced is when I tried to send the mail using smtplib, Logging in with your gmail account [Used a burner account] and password no longer works as google have removed less secure ways of signing in, so **how to solve this** : Create an app password after turning on Two-factor Authorization, and use that password instead of the account's password. <br>
+- The timer and counter functionality took me more time to implement properly. <br>
+- Compiling the python file into an executable, is where I literally spend more time in this project, especially in order to evade the antivirus. Initially I used **pyinstaller** and compiled it regularly, it got detected. I tried using **--windowed**, **--noconsole flags** in order to get an executable which dont open a terminal explicitly when executed. It Also got detected. Then I did some workaround and referred to David Bombal's youtube video, finally I got an executable which evaded the antivirus but it opened a terminal everytime I opened the executable, which is no good as you can't use it as a proper payload.  [NOTE: I packed the executable as onefile] <br>
+- In order to prevent this terminal getting opened, I tried to implement some sort of GUIs, so that the GUI get's opened with some deceiving notifications eg: Your device will restart to update outside of active hours (estimate: 5 min). <br>
+- Experimented with these modules one by one: tkinter [not worked, it showed the notification message along with the blank black terminal] , pythonnet [a module which utilizes .net dll's such as windows forms - didn't worked either]. <br>
+- Finally my brain cell told me to try alternate compilers: Compiled using **cx_freeze**, guess what this one evaded the antivirus but I was not able to bundle the executable into onefile, for this too you literally have to package all required libraries including python so your executable runs independently of system Python, another FAILURE...<br>
+- Atlast went with **nuitka** and did some workaround, it was a success. The executable did run as a background process and didn't opened any terminal.
+<br>
+
+OUTPUT EXE USING CX_FREEZE:
+As you can see, this one's dependent on other dll and dependencies
+![Image](https://github.com/user-attachments/assets/16d29711-087f-469f-8fad-e3eea199a3e1)
 
