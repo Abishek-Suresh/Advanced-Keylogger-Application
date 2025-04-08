@@ -6,18 +6,16 @@ This keylogger application is build with python and Compiled with Nuitka. The fu
 <br>
 <br>
 
-
-
 ## Possible future developments
 - I've already tried to add screen recording feature using the python module ffmpeg. Yet to develop
 - Introducing Cryptography, we can encrypte the log files that we collect and then sent it via mail such that others can't access to the data without decrpyting it.
 - Not just stopping with mail, we can further develop this application such that it can send all the collected information to a server.
 - steganograph this executable into a picture making it a great payload
 - and so on
+  <br>
+  <br>
   
-<br><br>
 ## Code 
-
 ### Importing the Required Libraries: 
 - smtplib | MIMEMultipart |MIMEText| MIMEBase | encoders : For sending email
 - socket | Platform | OS | tempfile | time | getpass : For collecting information about the host and file operations
@@ -26,6 +24,7 @@ This keylogger application is build with python and Compiled with Nuitka. The fu
 - write from scipy.io.wavfile | sounddevice : To record and save from microphone
 - Imagegrab from pillow : To take screenshots of the victim machine
 - subprocess | re : for grabbing wifi informations
+<br>
 
 ### Main Functions:
 - **send_email()** : Takes three input arguments, filename, attachment path, To address for sending the mail with all the log files, audio recording and screenshots.
@@ -35,6 +34,7 @@ This keylogger application is build with python and Compiled with Nuitka. The fu
 - **screenshot()**: This function captures screenshot from the victim machine and saves it.
 - **wifi_info()** : Using the subprocess module we gonna run the command "netsh wlan show profiles" and then capture the output from the terminal. Using regular expression (re), we can extract the available wifi-profiles and then look for security keys and then write them to a logfile named: "wifi_info.txt".
 #### NOTE : All the log files are being saved in the temp folder of the victim machine so that we can do this all under the radar. Using gettempdir() method from tempfile module, we can get the tempfolder path in the victim's machine and then save the files there.
+<br>
 
 ### Grabbing Key strokes and setting a desired timing for the keylogger:
 
@@ -42,6 +42,7 @@ This keylogger application is build with python and Compiled with Nuitka. The fu
 - **on_press()** : This function gets called when a key is pressed, this takes the key as input appends it to a empty list and then gets written in the log file named "keys_log.txt" utilizing the next function in our list, i.e write_file()
 - **write_file()** : This function takes in our keys as input argument and then writes it to the log file when called.
 - **on_release()** : There's literally two times this function gets called, when esc key is pressed or when the assigned time for the keylogger's iteration ends. Next we gonna see this counter's functionality.
+<br>
 
 ### Counter Functionality:
 #### Defined variables for this counter and timer functionality:
@@ -52,6 +53,7 @@ This keylogger application is build with python and Compiled with Nuitka. The fu
 - **time_iteration** : Time interval for the keylogger to run in seconds for each iteration [for capturing the key strokes]
 
 #### NOTE: All the main functions are kept inside the while loop utilizing the above variables for our timer and counter function to work.
+<br>
 
 ### Flying under the radar - Leaving NO TRACE:
 - As I mentioned earlier, all the log files and recordings are getting stored in the temporary folder of the victim's machine. Once the iteration is completed and the mails have been sent, after 60 seconds, all those log files that got created will be deleted leveraging the OS module leaving no trace...
