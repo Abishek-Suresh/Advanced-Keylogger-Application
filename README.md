@@ -108,7 +108,7 @@ This executable runs without any dependencies as a onefile.
 
 #### Thanks to David Bombal, Grant Collis, TechwithTim
 
-##### Videos I refered:
+##### Videos I referred:
 
 https://youtu.be/25um032xgrw?si=iZw8bPnPW-RrVj9C <br>
 https://youtu.be/LBM3EzBXhdY?si=5fAR1UJe-FDcsXrx <br>
