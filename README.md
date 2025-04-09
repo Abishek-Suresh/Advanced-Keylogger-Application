@@ -63,7 +63,7 @@ This keylogger application is build with python and Compiled with Nuitka. The fu
 
 #### This is how an email is sent out with all the information per iteration:
 
-I was keep on testing and this is how the inbox looked like :)
+I was extensively testing and this is how my inbox looked like :)
 ![Image](https://github.com/user-attachments/assets/b5f20214-f0c3-427a-a9a4-f2a4fb475927)
 <br>
 
