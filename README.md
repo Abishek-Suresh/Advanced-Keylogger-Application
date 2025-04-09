@@ -67,7 +67,7 @@ I was extensively testing and this is how my inbox looked like :)
 ![Image](https://github.com/user-attachments/assets/b5f20214-f0c3-427a-a9a4-f2a4fb475927)
 <br>
 
-Anyways, these are the output files that are being sen over mail:
+Anyways, these are the output files that are being sent over mail:
 ![Image](https://github.com/user-attachments/assets/d0d02c37-0263-4c94-9e09-e1953312b330)
 <br>
 <br>
